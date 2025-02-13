@@ -45,8 +45,8 @@ spring.datasource.password=your_password
 ### 3️⃣ Build and Run the Application
 
 ```sh
-mvn clean install
-mvn spring-boot:run
+./gradlew clean build
+./gradlew bootRun
 ```
 
 ---
@@ -77,6 +77,7 @@ mvn spring-boot:run
 
 ```json
 {
+    "id": 5,
     "centerName": "Traini8 Center",
     "centerCode": "TRAINI812355",
     "address": {
@@ -90,6 +91,76 @@ mvn spring-boot:run
     "contactPhone": "9876543210",
 		"createdOn": "2025-02-13T17:22:50.684389"
 }
+
+```
+
+**Endpoint:** `GET /api/v1/training-centers`
+**Response (200 Ok):**
+```json
+
+[
+	{
+		"id": 1,
+		"centerName": "Traini8 Center",
+		"centerCode": "TRAINI812361",
+		"address": {
+			"detailedAddress": "123 Main St",
+			"city": "Mumbai",
+			"state": "Maharashtra",
+			"pincode": "400001"
+		},
+		"studentCapacity": 100,
+		"coursesOffered": [
+			"Java",
+			"Spring Boot"
+		],
+		"contactEmail": "contact@traini8.com",
+		"contactPhone": "9876543210",
+		"createdOn": "2025-02-13T17:55:23.143668"
+	},
+	{
+		"id": 2,
+		"centerName": "Traini8 Center",
+		"centerCode": "TRAINI812362",
+		"address": {
+			"detailedAddress": "123 Main St",
+			"city": "Mumbai",
+			"state": "Maharashtra",
+			"pincode": "400001"
+		},
+		"studentCapacity": 100,
+		"coursesOffered": [
+			"Java",
+			"Spring Boot"
+		],
+		"contactEmail": "contact@traini8.com",
+		"contactPhone": "9876543210",
+		"createdOn": "2025-02-13T17:55:28.225603"
+	}
+]
+
+
+
+**Endpoint:** `GET /api/v1/training-centers`
+**Response (200 Ok):**
+
+```json
+{
+    "id": 5,
+    "centerName": "Traini8 Center",
+    "centerCode": "TRAINI812355",
+    "address": {
+        "detailedAddress": "123 Main St",
+        "state": "Maharashtra",
+        "pincode": "400001"
+    },
+    "studentCapacity": 100,
+    "coursesOffered": ["Java", "Spring Boot"],
+    "contactEmail": "contact@traini8.com",
+    "contactPhone": "9876543210",
+		"createdOn": "2025-02-13T17:22:50.684389"
+}
+
 ```
 
 ### 2️⃣ **Handle Unique ********`centerCode`******** Validation**
