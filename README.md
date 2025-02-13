@@ -97,12 +97,6 @@ mvn spring-boot:run
 If the `centerCode` already exists, it returns:
 **Response (409 Conflict):**
 
-```json
-{
-    "centerCode": "CenterCode already exists"
-}
-```
-
 ---
 
 ## 📖 Exception Handling
@@ -118,10 +112,6 @@ If `centerName` is empty, the response will be:
     "centerName": "CenterName is mandatory"
 }
 ```
-
-
-
----
 
 ## 🛠️ Future Enhancements
 
